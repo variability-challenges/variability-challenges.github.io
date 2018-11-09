@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Challenge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body id="mainPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../../index.html">Variability Challenges</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#abstract">Abstract</a></li>
+		<li><a href="#material">Material</a></li>
+		<li><a href="#solutions">Solutions</a></li>
+		<li><a href="#discussion">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+<h4>SPLC 2018 Challenge</h4>
+<h2>Feature Location Benchmark with ArgoUML SPL</h2>
+Jabier Martinez, Sorbonne Université, CNRS, LIP6, France</br>
+Nicolas Ordoñez, Universidad Nacional de Colombia, Colombia</br>
+Xhevahire Tërnava, Sorbonne Université, CNRS, LIP6, France</br>
+Tewfik Ziadi, Sorbonne Université, CNRS, LIP6, France</br>
+Jairo Aponte, Universidad Nacional de Colombia, Colombia</br>
+Eduardo Figueiredo, Universidade Federal de Minas Gerais, Brazil</br>
+Marco Tulio Valente, Universidade Federal de Minas Gerais, Brazil</br>
+</div>
+
+<div id="abstract" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-1"></div>
+   <div class="col-sm-2" style="text-align:center"><a href="https://github.com/but4reuse/argouml-spl-benchmark" target="_new"><img style="width:70%" src="./files/logo.png"></a></div>
+    <div class="col-sm-7">
+    Feature location is a traceability recovery activity to identify the implementation elements associated to a characteristic of a system. Besides its relevance for software maintenance of a single system, feature location in a collection of systems received a lot of attention as a first step to re-engineer system variants (created through clone-and-own) into a Software Product Line (SPL). In this context, the objective is to unambiguously identify the boundaries of a feature inside a family of systems to later create reusable assets from these implementation elements. Among all the case studies in the SPL literature, variants derived from ArgoUML SPL stands out as the most used one. However, the use of different settings, or the omission of relevant information (e.g., the exact configurations of the variants or the way the metrics are calculated), makes it difficult to reproduce or benchmark the different feature location techniques even if the same ArgoUML SPL is used. With the objective to foster the research area on feature location, we provide a set of common scenarios using ArgoUML SPL and a set of utils to obtain metrics based on the results of existing and novel feature location techniques.</br>
+        </div>
+	<div class="col-sm-2">
+	</div>
+  </div>
+</div>
+
+
+<div id="material" class="container-fluid">
+  <div class="row">
+   <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Material</h2>
+<a href="https://doi.org/10.1145/3233027.3236402" target="_new"><span class="glyphicon glyphicon-file"></span> Challenge paper</a> <br>
+<a href="https://github.com/but4reuse/argouml-spl-benchmark" target="_new"><span class="glyphicon glyphicon-folder-open"></span> Repository of source code and more information</a> <br>
+
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
+
+<div id="solutions" class="container-fluid bg-grey">
+  <div class="row">
+     <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Solutions</h2>
+No solutions yet.
+    </div>
+	<div class="col-sm-2"></div>
+  </div>
+</div>
+
+<div id="discussion" class="container-fluid bg-grey">
+  <div class="row">
+     <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Discussion</h2>
+<h4>References outside the SPLC Challenge track</h4>
+Previous to the Challenge paper, we can find many references to the case study.<br>
+ArgoUML SPL case study has its own entry in the <a href="ESPLA https://but4reuse.github.io/espla_catalog/" target="_new">ESPLA Catalog <span class="glyphicon glyphicon-new-window"></span></a> (extractive SPL adoption catalog of case studies).<br>
+<br>
+   </div>
+	<div class="col-sm-2"></div>
+  </div>
+</div>
+
+
+
+<footer class="container-fluid text-center">
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#mainPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>

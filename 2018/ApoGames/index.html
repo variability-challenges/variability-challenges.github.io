@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Challenge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body id="mainPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../../index.html">Variability Challenges</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#abstract">Abstract</a></li>
+		<li><a href="#material">Material</a></li>
+		<li><a href="#solutions">Solutions</a></li>
+		<li><a href="#discussion">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+<h4>SPLC 2018 Challenge</h4>
+<h2>Apo-Games – A Case Study for Reverse Engineering Variability from Cloned Java Variants</h2>
+Jacob Krüger, Harz University of Applied Science, Otto-von-Guericke-University, Germany</br>
+Wolfram Fenske, Otto-von-Guericke-University, Germany</br>
+Thomas Thüm, Technische Universität Braunschweig, Germany</br>
+Dirk Aporius, Eudemonia Solutions AG, Germany</br>
+Gunter Saake, Otto-von-Guericke-University, Germany</br>
+Thomas Leich, Harz University of Applied Sciences, METOP GmbH, Germany
+</div>
+
+<div id="abstract" class="container-fluid">
+  <div class="row">
+  <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+    Software-product-line engineering is an approach to systematically manage reusable software features and has been widely adopted in practice. Still, in most cases, organizations start with a single product that they clone and modify when new customer requirements arise (a.k.a. clone-and-own). With an increasing number of variants, maintenance can become challenging and organizations may consider migrating towards a software product line, which is referred to as extractive approach. While this is the most common approach in practice, techniques to extract variability from cloned variants still fall short in several regards. In particular, this accounts for the low accuracy of automated analyses and refactoring, our limited understanding of the costs involved, and the high manual effort. A main reason for these limitations is the lack of realistic case studies. To tackle this problem, we provide a set of cloned variants. In this paper, we characterize these variants and challenge the research community to apply techniques for reverse engineering feature models, feature location, code smell analysis, architecture recovery, and the migration towards a software product line. By evaluating solutions with the developer of these variants, we aim to contribute to a larger body of knowledge on this real-world case study.</br>
+        </div>
+	<div class="col-sm-2">
+	</div>
+  </div>
+</div>
+
+
+<div id="material" class="container-fluid">
+  <div class="row">
+  <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Material</h2>
+<a href="https://doi.org/10.1145/3233027.3236403" target="_new"><span class="glyphicon glyphicon-file"></span> Challenge paper</a> <br>
+<a href="https://bitbucket.org/Jacob_Krueger/apogamessrc" target="_new"><span class="glyphicon glyphicon-folder-open"></span> Repository of variants source code and more information</a> <br>
+
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
+
+<div id="solutions" class="container-fluid bg-grey">
+  <div class="row">
+     <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Solutions</h2>
+<h3>Multi-Objective Optimization for Reverse Engineering of Apo-Games Feature Models</h3>
+<i>Willian D. F. Mendonça, Wesley K. G. Assunção and Lukas Linsbauer</i><br>
+SPLC 2018 Solution<br>
+Software Product Lines Engineering (SPLE) is a software development approach intended for the development and maintenance of variable systems, i.e. systems that exist in many different variants. In the long run SPLE has many advantages. However, it requires a large upfront investment of time and money, which is why in practice Software Product Lines (SPLs) are rarely developed from scratch. Instead, they are often built using an extractive approach by which a set of existing system variants is consolidated (i.e. reverse engineered) into an SPL. A crucial part of this process is the construction of a variability model like a Feature Model (FM) that describes the common and variable parts of the system variants. In this paper we apply an approach for reverse engineering feature models based on a multi-objective optimization algorithm to the given challenge of constructing a feature model for a set of game variants and we present the results. <br>
+<a href="https://doi.org/10.1145/3233027.3236397" target="_new"><span class="glyphicon glyphicon-file"></span> Solution paper</a> <br>
+<br>
+<h3>Recovering the Product Line Architecture of the Apo-Games</h3>
+<i>Crescencio Lima, Ivan Machado, Eduardo Almeida and Christina Chavez</i><br>
+SPLC 2018 Solution<br>
+Software Product Line (SPL) engineering is a paradigm for the development of a family of products based on the systematic reuse of artifacts. Although its increasing adoption, organizations often start with a single system and use ad-hoc techniques such as cloneand-own to create new systems by performing small changes and adaptations to meet customers’ needs. However, as the number of clones raises over time, it becomes a hard task to maintain and support all the systems. This scenario happened in the Apo-Games projects and adopting SPL Engineering can address these issues. Product Line Architecture (PLA) is one of the key assets to allow the success of SPL development. In this paper, we apply our approach to recover the PLA of the Apo-Games projects by using the source code of a set of Android and Java clones.We provide a set of information to support the development of the Apo-Games SPL. We identified that the Android and Java projects have similar PLAs.<br>
+<a href="https://doi.org/10.1145/3233027.3236398" target="_new"><span class="glyphicon glyphicon-file"></span> Solution paper</a> <br>
+    </div>
+	<div class="col-sm-2"></div>
+  </div>
+</div>
+
+<div id="discussion" class="container-fluid bg-grey">
+  <div class="row">
+     <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Discussion</h2>
+<h4>References outside the SPLC Challenge track</h4>
+Apo-Games case study has its own entry in the <a href="ESPLA https://but4reuse.github.io/espla_catalog/" target="_new">ESPLA Catalog<span class="glyphicon glyphicon-new-window"></span></a> (extractive SPL adoption catalog of case studies).<br>
+<br>
+Previous to the Challenge paper, we can find two main references to the case study.<br>
+Variant-Preserving Refactorings for Migrating Cloned Products to a Product Line<br>
+<i>Wolfram Fenske, Jens Meinicke, Sandro Schulze, Steffen Schulze, and Gunter Saake</i><br>
+SANER 2017, International Conference on Software Analysis, Evolution and Reengineering, 2017<br>
+<a href="https://doi.org/10.1109/SANER.2017.7884632" target="_new"><span class="glyphicon glyphicon-file"></span> Paper</a> <br>
+<br>
+Finding Lost Features in Cloned Systems<br>
+<i>Jacob Krüger, Louis Nell, Wolfram Fenske, Gunter Saake, Thomas Leich</i><br>
+SPLC 2017 REVE workshop, International Systems and Software Product Line Conference, 2017<br>
+<a href="https://doi.org/10.1145/3109729.3109736" target="_new"><span class="glyphicon glyphicon-file"></span> Paper</a> <br>
+<br>
+After the Challenge paper, we can also find this reference outside of the SPLC Challenge track<br>
+Towards an Automated Product Line Architecture Recovery: The Apo-Games Case Study<br>
+<i>Crescencio Lima, Wesley K. G. Assunção, Jabier Martinez, Christina von Flach G. Chavez, Willian D. F. Mendonça</i><br>
+SBCARS '18 Proceedings of the VII Brazilian Symposium on Software Components, Architectures, and Reuse, Pages 33-42, Sao Carlos, Brazil — September 17 - 21, 2018<br>
+<a href="https://doi.org/10.1145/3267183.3267187" target="_new"><span class="glyphicon glyphicon-file"></span> Paper</a> <br>
+   </div>
+	<div class="col-sm-2"></div>
+  </div>
+</div>
+
+
+
+<footer class="container-fluid text-center">
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#mainPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
