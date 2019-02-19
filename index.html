@@ -39,17 +39,17 @@
 <div id="intro" class="container-fluid">
   <div class="row">
   <div class="col-sm-1"></div>
-   <div class="col-sm-2" style="text-align:center"><a href="http://www.splc2019.net/" target="_new"><img style="width:70%" src="./files/SPLC_2019.png"></a><br/>
-      <i>Challenge track co-chairs</i><br/>
-   Jabier Martinez, Tecnalia, Spain<br/>
-   Timo Kehrer, Humboldt-Universität zu Berlin, Germany<br/>
+   <div class="col-sm-2" style="text-align:center">
+   <i>Current SPLC</i><br/>
+   <a href="http://www.splc2019.net/" target="_new"><img style="width:70%" src="./files/SPLC_2019.png"></a><br/>
    </div>
     <div class="col-sm-7">
-    <h1>Call for new challenges</h1>
-        <h4><span class="label label-warning">NEW</span> Call for Challenges and Solution Papers for <a href="http://splc2019.net/">SPLC 2019</a></h4>
-    We highly encourage community members to provide concrete sets of case studies and problems that showcase SPL-related challenges. First, there will be a call for cases where researchers or practitioners are encouraged to contribute a concrete case study. Then, after the accepted case studies are published, there will be a call for solutions. Both accepted case descriptions and solutions will be included in the conference proceedings.<br/>
-    <b>Deadline for Challenge papers: 25 January 2019</b><br/>
-    All the information at <a href="http://splc2019.net">SPLC 2019 website <span class="glyphicon glyphicon-new-window"></span></a>
+    <h1>Call for Challenge Solutions</h1>
+        <h4><span class="label label-warning">Call for Solution Papers is Open</span></h4>
+    We highly encourage community members to provide solutions for the challenges of SPLC 2019 and SPLC 2018. Solutions will be included in the conference proceedings, and presented during the conference.<br/>
+    <b>Deadline for Challenge solutions: 28 May 2019</b><br/>
+    Submission instructions: <a href="https://splc2019.net/call-for-papers/call-for-challenge-solutions/" target="_new">https://splc2019.net/call-for-papers/call-for-challenge-solutions/</a>
+    
     <h2>Community</h2>
         <h4><span class="label label-info"><span class="glyphicon glyphicon glyphicon-user"></span><span class="glyphicon glyphicon glyphicon-user"></span><span class="glyphicon glyphicon glyphicon-user"></span></span></h4>
         The SPLC challenge track aims at providing the software product-line (SPL) community with a set of case studies that tackle relevant SPL problems and challenge the state of the art. The challenge track was established with SPLC 2018 in Gothenburg, initiated by Sarah Nadi, Timo Kehrer, and Thorsten Berger.<br/>
@@ -57,6 +57,34 @@ The challenge is organized in two phases every year. The first phase is the call
 <br/>
         You are highly encouraged to contribute to this website. For example by collecting references to challenge solutions outside the SPLC challenge track. You can propose any improvement or correction by direct editing the <a href="https://github.com/variability-challenges/variability-challenges.github.io" target="_new">github-based website</a> and creating a pull request , creating a <a href="https://github.com/variability-challenges/variability-challenges.github.io/issues/new" target="_new">github issue</a>, or just sending an email to the challenge track co-chairs.  
     </div>
+	<div class="col-sm-2"></div>
+  </div>
+</div>
+
+<div id="intro" class="container-fluid">
+  <div class="row">
+  <div class="col-sm-1"></div>
+   <div class="col-sm-2" style="text-align:center"><a href="http://www.splc2019.net/" target="_new"><img style="width:70%" src="./files/SPLC_2019.png"></a><br/>
+      <i>Challenge track co-chairs</i><br/>
+   Jabier Martinez, Tecnalia, Spain<br/>
+   Timo Kehrer, Humboldt-Universität zu Berlin, Germany<br/>
+   </div>
+    <div class="col-sm-7">
+    <h1>Challenges</h1>
+       
+<h3><span class="label label-warning">NEW</span> Applying Concepts of Product Line Engineering in Deep Neural Networks</h3>
+<i>Javad Ghofrani, Ehsan Kozegar, Anna Lena Fehlhaber, and Mohammad Divband Soorati</i><br/>
+<a href="./2019/DeepNeuralNetworks/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
+Deep Neural Networks (DNNs) are increasingly being used as a machine learning solution thanks to the complexity of their architecture and hyperparameters-weights. A drawback is the excessive demand for massive computational power during the training process. Not only as a whole but parts of neural networks can also be in charge of certain functionalities. We present a novel challenge in an intersection between machine learning and variability management communities to reuse modules of DNNs without further training. Let us assume that we are given a DNN for image processing that recognizes cats and dogs. By extracting a part of the network, without additional training a new DNN should be divisible with the functionality of recognizing only cats. Existing research in variability management can offer a foundation for a product line of DNNs composing the reusable functionalities. An ideal solution can be evaluated based on its speed, granularity of determined functionalities, and the support for adding variability to the network. The challenge is decomposed in three subchallenges: feature extraction, feature abstraction, and the implementation of a product line of DNNs.
+<br/> 
+
+<h3><span class="label label-warning">NEW</span> Product Sampling for Product Lines: The Scalability Challenge</h3>
+<i>Tobias Pett, Thomas Thüm, Tobias Runge, Sebastian Krieter, Malte Lochau, and Ina Schaefer</i><br/>
+<a href="./2019/Sampling/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
+Quality assurance for product lines is often infeasible for each product separately. Instead, often only a subset of all products (i.e. a sample) is considered in testing such that at least the coverage of certain feature interactions is guaranteed. While pair-wise interaction sampling covers all interactions between two features, its generalization to t-wise interaction sampling ensures coverage for all interactions among t features. However, sampling for large product lines poses a challenge, as today’s algorithms tend to run out of memory, do not terminate, or produce samples, which are too large to be tested. To approach this challenge, we provide a set of large real-world feature-models with up-to 19 thousand features, which are supposed to be sampled. The performance of the sampling is evaluated based on the time and memory consumed to retrieve a sample and the sample size for a given coverage (i.e. t value). A well-performing sampling algorithm achieves full t-wise coverage, while minimizing all three of these properties.
+<br/> 
+        
+       </div>
 	<div class="col-sm-2"></div>
   </div>
 </div>
@@ -72,28 +100,31 @@ The challenge is organized in two phases every year. The first phase is the call
    Timo Kehrer, Humboldt-Universität zu Berlin, Germany<br/>
    </div>
     <div class="col-sm-7">
-    <h1>Challenges</h1>
-    
+
     <h3>Apo-Games – A Case Study for Reverse Engineering Variability from Cloned Java Variants</h3>
 <i>Jacob Krüger, Wolfram Fenske, Thomas Thüm, Dirk Aporius, Gunter Saake, and Thomas Leich</i><br/>
 <a href="./2018/ApoGames/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
 Software-product-line engineering is an approach to systematically manage reusable software features and has been widely adopted in practice. Still, in most cases, organizations start with a single product that they clone and modify when new customer requirements arise (a.k.a. clone-and-own). With an increasing number of variants, maintenance can become challenging and organizations may consider migrating towards a software product line, which is referred to as extractive approach. While this is the most common approach in practice, techniques to extract variability from cloned variants still fall short in several regards. In particular, this accounts for the low accuracy of automated analyses and refactoring, our limited understanding of the costs involved, and the high manual effort. A main reason for these limitations is the lack of realistic case studies. To tackle this problem, we provide a set of cloned variants. In this paper, we characterize these variants and challenge the research community to apply techniques for reverse engineering feature models, feature location, code smell analysis, architecture recovery, and the migration towards a software product line. By evaluating solutions with the developer of these variants, we aim to contribute to a larger body of knowledge on this real-world case study.<br/>
 <br/>
+
 <h3>Feature Location Benchmark with ArgoUML SPL</h3>
 <i>Jabier Martinez, Nicolas Ordoñez, Xhevahire Tërnava, Tewfik Ziadi, Jairo Aponte, Eduardo Figueiredo, and Marco Tulio Valente</i><br/>
 <a href="./2018/ArgoUMLSPL/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
 Feature location is a traceability recovery activity to identify the implementation elements associated to a characteristic of a system. Besides its relevance for software maintenance of a single system, feature location in a collection of systems received a lot of attention as a first step to re-engineer system variants (created through clone-and-own) into a Software Product Line (SPL). In this context, the objective is to unambiguously identify the boundaries of a feature inside a family of systems to later create reusable assets from these implementation elements. Among all the case studies in the SPL literature, variants derived from ArgoUML SPL stands out as the most used one. However, the use of different settings, or the omission of relevant information (e.g., the exact configurations of the variants or the way the metrics are calculated), makes it difficult to reproduce or benchmark the different feature location techniques even if the same ArgoUML SPL is used. With the objective to foster the research area on feature location, we provide a set of common scenarios using ArgoUML SPL and a set of utils to obtain metrics based on the results of existing and novel feature location techniques.<br/>
 <br/>
+
 <h3>Interoperability of Software Product Line Variants</h3>
 <i>Ferruccio Damiani, Reiner Hähnle, Eduard Kamburjan, and Michael Lienhardt</i><br/>
 <a href="./2018/InteroperabilitySPLVariants/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
 Software Product Lines are an established mechanism to describe multiple variants of one software product. Current approaches however, do not offer a mechanism to support the use of multiple variants from one product line in the same application. We experienced the need for such a mechanism in an industry project with German Railways where we do not merely model a highly variable system, but a system with highly variable subsystems. We present the design challenges that arise when software product lines have to support the use of multiple variants in the same application, in particular: How to reference multiple variants, how to manage multiple variants to avoid name clashes, and how to keep multiple variants interoperable.<br/>
 <br/>
+
 <h3>Localizing Configurations in Highly-Configurable Systems</h3>
 <i>Paul Gazzillo, Ugur Koc, Thanhvu Nguyen, and Shiyi Wei</i><br/>
 <a href="./2018/LocalizingConfigurations/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
 The complexity of configurable systems has grown immensely, and it is only getting more complex. Such systems are a challenge for software testing and maintenance, because bugs and other defects can and do appear in any configuration. One common requirement for many development tasks is to identify the configurations that lead to a given defect or some other program behavior. We distill this requirement down to a challenge question: given a program location in a source file, what are valid configurations that include the location? The key obstacle is scalability. When there are thousands of configuration options, enumerating all combinations is exponential and infeasible. We provide a set of target programs of increasing difficulty and variations on the challenge question so that submitters of all experience levels can try out solutions. Our hope is to engage the community and stimulate new and interesting approaches to the problem of analyzing configurations.<br/>
 <br/>
+
     </div>
 	<div class="col-sm-2"></div>
   </div>
