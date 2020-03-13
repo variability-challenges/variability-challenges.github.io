@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Challenge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body id="mainPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../../index.html">Variability Challenges</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#abstract">Abstract</a></li>
+		<li><a href="#material">Material</a></li>
+		<li><a href="#solutions">Solutions</a></li>
+		<li><a href="#discussion">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+<h4>SPLC 2020 Challenge</h4>
+<h2>Variability Management meets Microservices: Six Challenges of Re-Engineering Microservice-Based Webshops</h2>
+Wesley K. G. Assunção, Rio de Janeiro, Brazil<br>
+Jacob Krüger, University of Toronto, Canada<br>
+Willian D. F. Mendonça,Federal University of Paraná, Brazil
+</div>
+
+<div id="abstract" class="container-fluid">
+  <div class="row">
+  <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+      A microservice implements a small unit of functionality that it
+      provides through a network using lightweight protocols. So, microservices can be combined to fulfill tasks and implement features
+      of a larger software system—resembling a variability mechanism
+      in the context of a software product line (SPL). Microservices and
+      SPLs have similar goals, namely facilitating reuse and customizing,
+      but they are usually employed in different contexts. Any developer
+      who has access to the network can provide a microservice for any
+      task, while SPLs are usually intended to implement features of a
+      single domain. Due to their different concepts, using microservices
+      to implement an SPL or adopting SPL practices (e.g., variability
+      management) for microservices is a challenging cross-area research
+      problem. However, both techniques can complement each other,
+      and thus tackling this problem promises benefits for organizations
+      that employ either technique. In this paper, we reason on the importance of advancing in this direction, and sketch six concrete
+      challenges to initiate research, namely (1) feature identification,
+      (2) variability modeling, (3) variable microservice architectures, (4)
+      interchangeability, (5) deep customization, and (6) re-engineering
+      an SPL. We intend these challenges to serve as a starting point for
+      future research in this cross-area research direction—avoiding that
+      the concepts of one area are reinvented in the other.    </div>
+	<div class="col-sm-2">
+	</div>
+  </div>
+</div>
+
+
+<div id="material" class="container-fluid">
+  <div class="row">
+  <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Material</h2>
+<a href="http://splc2020.net/wp-content/uploads/2020/03/SPLC_2020_paper_2.pdf" target="_new"><span class="glyphicon glyphicon-file"></span> Challenge case description</a> <br>
+
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
+<!--
+<div id="solutions" class="container-fluid bg-grey">
+  <div class="row">
+     <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Solutions</h2>
+<h3>t-wise Coverage by Uniform Sampling</h3>
+<i>Jeho Oh, Paul Gazzillo and Don Batory</i><br>
+SPLC 2019 Solution<br>
+Efficiently testing large configuration spaces of Software Product Lines (SPLs) needs a sampling algorithm that is both scalable and provides good t-wise coverage. The 2019 SPLC Sampling Challenge provides large real-world feature models and asks for a t-wise sampling algorithm that can work for those models. We evaluated t-wise coverage by uniform sampling (US) the configurations of one of the provided feature models. US means that every (legal) configuration is equally likely to be selected. US yields statistically representative samples of a configuration space and can be used as a baseline to compare other sampling algorithms. We used existing algorithm called Smarch to uniformly sample SPL configurations. While uniform sampling alone was not enough to produce 100% 1-wise and 2-wise coverage, we used standard probabilistic analysis to explain our experimental results and to conjecture how uniform sampling may enhance the scalability of existing t-wise sampling algorithms.<br>
+<a href="https://doi.org/10.1145/3336294.3342359" target="_new"><span class="glyphicon glyphicon-file"></span> Solution paper</a> <br>
+    </div>
+	<div class="col-sm-2"></div>
+  </div>
+</div>
+-->
+<div id="discussion" class="container-fluid bg-grey">
+  <div class="row">
+     <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Discussion</h2>
+No discussion section for the moment.
+   </div>
+	<div class="col-sm-2"></div>
+  </div>
+</div>
+
+
+
+<footer class="container-fluid text-center">
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#mainPage']").on('click', function(event) {
+
+	// Store hash
+	var hash = this.hash;
+	if (typeof $(hash).offset() !== 'undefined') {
+	  
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  }
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
