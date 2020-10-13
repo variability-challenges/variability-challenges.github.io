@@ -27,8 +27,8 @@
         <li><a href="#abstract">Abstract</a></li>
 		<li><a href="#material">Material</a></li>
         <li><a href="#overview">Overview</a></li>
-		<!--<li><a href="#solutions">Solutions</a></li>
-		<li><a href="#discussion">Discussion</a></li>-->
+		<li><a href="#solutions">Solutions</a></li>
+		<li><a href="#discussion">Discussion</a></li>
       </ul>
     </div>
   </div>
@@ -80,13 +80,13 @@ What is the number of valid configurations for Linux? How to generate uniform ra
    <div class="col-sm-2"></div>
     <div class="col-sm-7">
 		<h2>Overview</h2>
-		<h3>What is the holy grail of the product-line community? A binary decision diagram for Linux.</h3>
+		<h4>What is the holy grail of the product-line community? A binary decision diagram for Linux.</h4>
 		
 		Linux is an operating system with thousands of configuration options. These options cannot be arbitrarily combined, as every option typically comes with constraints with respect to several other options. Constraints are specified in KConfig, but can be translated into feature models or propositional logic. Whenever we analyze the Linux kernel for errors, ignoring those constraints would lead to false positives. That is, tools would report errors for invalid configurations, which cannot be used to compile a kernel. Hence, these constraints are crucial for any kind of analysis of Linux.<br><br>
 		
 		A <b>binary decision diagram</b> (short BDD) is data structure representing a propositional formula. While there are multiple representations of propositional formulas, BDDs can have the advantage of reducing NP-complete problems into more tractable problems (aka. <b>knowledge compilation</b>). For instance, checking whether a formula represented as a BDD is satisfiable is an operation with constant effort. While operations on BDDs might scale well, the downside of BDDs is that their construction can be intractable. The main reason for the scalability challenge is that the variable ordering heavily influences the size of the BDD and they tend to explode for most variable orderings.<br><br>
 		
-		<h3>Why do we argue that a BDD for Linux is the holy grail of the product-line community?</h3>
+		<h4>Why do we argue that a BDD for Linux is the holy grail of the product-line community?</h4>
 		
 		First, it seems to be a challenging task. To the best of our knowledge, no one has been able to create a BDD for Linux so far. In <a href="https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.170/publications/2020-VaMoS-Sundermann.pdf">recent work</a>, we tried to create a BDD for hundreds of large feature models and failed for 98\% of them (i.e., 100\% of models having more than 550 features). Furthermore, even though other knowledge compilation techniques scaled to many large feature models, not a single knowledge compilation tool scaled to Linux when we tried to compute the number of valid configurations. Similarly, <a href="../../2019/Sampling/index.html">t-wise sampling algorithms typically do not scale to Linux</a>.<br><br>
 		
@@ -94,7 +94,7 @@ What is the number of valid configurations for Linux? How to generate uniform ra
 		
 		Third, there are many advantages of having a BDD. While it is widely accepted that satisfiability solving scales well for product lines, the potential advantage of a BDD is that one-time effort for the construction can pay-off when the BDD is later employed in follow-up analyses. The potential is amplified by several factors. First, a feature model is typically changed less frequently than implementation artifacts. As a consequence, a new BDD only needs to be created when the feature model changes. Second, for every new revision of the product line there are several analyses needed of which each typically is reduced to numerous satisfiability problems. It is likely that a large portion of the satisfiability problems can be solved more efficiently using a BDD.<br><br>
 		
-		<h3>What is the goal of this challenge?</h3>
+		<h4>What is the goal of this challenge?</h4>
 		
 		While our claim about the holy grail is focused on BDDs and Linux, there is a more general challenge behind this specific one. Linux is just one example of a large-scale configuration space. A BDD is just one example of a knowledge compilation technique. The goal of this challenge is to promote the problem of knowledge compilation for large-scale configuration spaces. In particular, this challenge is not only focused on software configuration, but also configurable systems and product configuration. Furthermore, any representation of the configuration space that invests offline computations (i.e., compilation) in favor of faster online computations would fall into the scope of this challenge.<br><br>
 		
@@ -106,18 +106,13 @@ What is the number of valid configurations for Linux? How to generate uniform ra
 </div>
 
 
-<!-- 
 <div id="solutions" class="container-fluid bg-grey">
   <div class="row">
      <div class="col-sm-1"></div>
    <div class="col-sm-2"></div>
     <div class="col-sm-7">
 <h2>Solutions</h2>
-<h3>t-wise Coverage by Uniform Sampling</h3>
-<i>Jeho Oh, Paul Gazzillo and Don Batory</i><br>
-SPLC 2019 Solution<br>
-Efficiently testing large configuration spaces of Software Product Lines (SPLs) needs a sampling algorithm that is both scalable and provides good t-wise coverage. The 2019 SPLC Sampling Challenge provides large real-world feature models and asks for a t-wise sampling algorithm that can work for those models. We evaluated t-wise coverage by uniform sampling (US) the configurations of one of the provided feature models. US means that every (legal) configuration is equally likely to be selected. US yields statistically representative samples of a configuration space and can be used as a baseline to compare other sampling algorithms. We used existing algorithm called Smarch to uniformly sample SPL configurations. While uniform sampling alone was not enough to produce 100% 1-wise and 2-wise coverage, we used standard probabilistic analysis to explain our experimental results and to conjecture how uniform sampling may enhance the scalability of existing t-wise sampling algorithms.<br>
-<a href="https://doi.org/10.1145/3336294.3342359" target="_new"><span class="glyphicon glyphicon-file"></span> Solution paper</a> <br>
+No solutions for the moment.
     </div>
 	<div class="col-sm-2"></div>
   </div>
@@ -134,7 +129,6 @@ No discussion section for the moment.
 	<div class="col-sm-2"></div>
   </div>
 </div>
--->
 
 
 <footer class="container-fluid text-center">
