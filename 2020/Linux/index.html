@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Challenge</title>
+  <title>Knowledge Compilation Challenge for Variability</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -26,8 +26,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#abstract">Abstract</a></li>
 		<li><a href="#material">Material</a></li>
-		<li><a href="#solutions">Solutions</a></li>
-		<li><a href="#discussion">Discussion</a></li>
+        <li><a href="#overview">Overview</a></li>
+		<!--<li><a href="#solutions">Solutions</a></li>
+		<li><a href="#discussion">Discussion</a></li>-->
       </ul>
     </div>
   </div>
@@ -49,8 +50,16 @@ What is the number of valid configurations for Linux? How to generate uniform ra
 	<div class="col-sm-2">
 	</div>
   </div>
+  <div class="row">
+  <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+		<img style="width:100%" src="./files/linux.png">
+    </div>
+	<div class="col-sm-2">
+	</div>
+  </div>
 </div>
-
 
 <div id="material" class="container-fluid">
   <div class="row">
@@ -58,12 +67,45 @@ What is the number of valid configurations for Linux? How to generate uniform ra
    <div class="col-sm-2"></div>
     <div class="col-sm-7">
 <h2>Material</h2>
-<a href="http://splc2020.net/wp-content/uploads/2020/03/SPLC_2020_paper_3.pdf" target="_new"><span class="glyphicon glyphicon-file"></span> Challenge case description</a> <br>
+<a href="https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.170/publications/2020-SPLC-Thuem.pdf" target="_new"><span class="glyphicon glyphicon-file"></span> Challenge case description</a> <br>
 
     </div>
     <div class="col-sm-2"></div>
   </div>
 </div>
+
+<div id="overview" class="container-fluid">
+  <div class="row">
+  <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+		<h2>Overview</h2>
+		<h3>What is the holy grail of the product-line community? A binary decision diagram for Linux.</h3>
+		
+		Linux is an operating system with thousands of configuration options. These options cannot be arbitrarily combined, as every option typically comes with constraints with respect to several other options. Constraints are specified in KConfig, but can be translated into feature models or propositional logic. Whenever we analyze the Linux kernel for errors, ignoring those constraints would lead to false positives. That is, tools would report errors for invalid configurations, which cannot be used to compile a kernel. Hence, these constraints are crucial for any kind of analysis of Linux.<br><br>
+		
+		A <b>binary decision diagram</b> (short BDD) is data structure representing a propositional formula. While there are multiple representations of propositional formulas, BDDs can have the advantage of reducing NP-complete problems into more tractable problems (aka. <b>knowledge compilation</b>). For instance, checking whether a formula represented as a BDD is satisfiable is an operation with constant effort. While operations on BDDs might scale well, the downside of BDDs is that their construction can be intractable. The main reason for the scalability challenge is that the variable ordering heavily influences the size of the BDD and they tend to explode for most variable orderings.<br><br>
+		
+		<h3>Why do we argue that a BDD for Linux is the holy grail of the product-line community?</h3>
+		
+		First, it seems to be a challenging task. To the best of our knowledge, no one has been able to create a BDD for Linux so far. In <a href="https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.170/publications/2020-VaMoS-Sundermann.pdf">recent work</a>, we tried to create a BDD for hundreds of large feature models and failed for 98\% of them (i.e., 100\% of models having more than 550 features). Furthermore, even though other knowledge compilation techniques scaled to many large feature models, not a single knowledge compilation tool scaled to Linux when we tried to compute the number of valid configurations. Similarly, <a href="../../2019/Sampling/index.html">t-wise sampling algorithms typically do not scale to Linux</a>.<br><br>
+		
+		Second, there is a considerable amount of research that is based on the translation of the feature model into a BDD. In the past two decades, researchers proposed the use of BDDs to count the number of valid configurations, to compute feature-model slices and differences, for interactive product configuration, to check whether product-line artifacts are consistent, to parse preprocessor-based product lines, to simplify preprocessor annotations, and to lift test-suite generation, data-flow analyses, or model checking to product lines. If we aim to apply that research to Linux or similarly complex configuration spaces, it is an open question whether BDDs can be created for them.<br><br>
+		
+		Third, there are many advantages of having a BDD. While it is widely accepted that satisfiability solving scales well for product lines, the potential advantage of a BDD is that one-time effort for the construction can pay-off when the BDD is later employed in follow-up analyses. The potential is amplified by several factors. First, a feature model is typically changed less frequently than implementation artifacts. As a consequence, a new BDD only needs to be created when the feature model changes. Second, for every new revision of the product line there are several analyses needed of which each typically is reduced to numerous satisfiability problems. It is likely that a large portion of the satisfiability problems can be solved more efficiently using a BDD.<br><br>
+		
+		<h3>What is the goal of this challenge?</h3>
+		
+		While our claim about the holy grail is focused on BDDs and Linux, there is a more general challenge behind this specific one. Linux is just one example of a large-scale configuration space. A BDD is just one example of a knowledge compilation technique. The goal of this challenge is to promote the problem of knowledge compilation for large-scale configuration spaces. In particular, this challenge is not only focused on software configuration, but also configurable systems and product configuration. Furthermore, any representation of the configuration space that invests offline computations (i.e., compilation) in favor of faster online computations would fall into the scope of this challenge.<br><br>
+		
+		What is the problem of the current situation? Many product-line researchers seem to address very similar problems for various reasons, but largely without documenting their failed attempts. Other researchers are most likely repeating the same mistakes again. The goal of this challenge is to make this problem explicit, to give researchers a forum to discuss attempts, and to exchange ideas on possible solutions.
+    </div>
+	<div class="col-sm-2">
+	</div>
+  </div>
+</div>
+
+
 <!-- 
 <div id="solutions" class="container-fluid bg-grey">
   <div class="row">
