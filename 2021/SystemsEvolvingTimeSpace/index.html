@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Testing Challenge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body id="mainPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../../index.html">Variability Challenges</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#abstract">Abstract</a></li>
+		<li><a href="#material">Material</a></li>
+		<li><a href="#solutions">Solutions</a></li>
+		<li><a href="#discussion">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+<h4>SPLC 2021 Challenge</h4>
+<h2>Managing Systems Evolving in Space and Time: Four Challenges for Maintenance, Evolution and Composition of Variants
+  </h2>
+Gabriela Karoline Michelon, Johannes Kepler University Linz, Austria</br>
+David Obermann, Johannes Kepler University Linz, Austria</br>
+Wesley K. G. Assunção, Pontifical Catholic University of Rio de Janeiro, Brazil</br>
+Lukas Linsbauer, Universität Braunschweig, Germany</br>
+Paul Grünbacher, Johannes Kepler University Linz, Austria</br>
+Alexander Egyed, Johannes Kepler University Linz, Austria
+</div>
+
+<div id="abstract" class="container-fluid">
+  <div class="row">
+  <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+      Software companies need to provide a large set of features satisfying
+      functional and non-functional requirements of diverse customers,
+      thereby leading to variability in space. Feature location techniques
+      have been proposed to support software maintenance and evolution
+      in space. However, so far only one feature location technique also
+      analyses the evolution in time of system variants, which is required
+      for feature enhancements and bug fixing. Specifically, existing tools
+      for managing a set of systems over time do not offer proper support
+      for keeping track of feature revisions, updating existing variants,
+      and creating new product configurations based on feature revisions.
+      This paper presents four challenges concerning such capabilities
+      for feature (revision) location and composition of new product
+      configurations based on feature/s (revisions). We also provide a
+      benchmark containing a ground truth and support for computing
+      metrics. We hope that this will motivate researchers to provide and
+      evaluate tool-supported approaches aiming at managing systems
+      evolving in space and time. Further, we do not limit the evaluation
+      of techniques to only this benchmark: we introduce and provide
+      instructions on how to use a benchmark extractor for generating
+      ground truth data for other systems. We expect that the feature
+      (revision) location techniques maximize information retrieval in
+      terms of precision, recall, and F-score, while keeping execution
+      time and memory consumption low.    </div>
+	<div class="col-sm-2">
+	</div>
+  </div>
+</div>
+
+
+<div id="material" class="container-fluid">
+  <div class="row">
+  <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Material</h2>
+<a href="./files/Evolution_Time_Space_Challenge_Case.pdf" target="_new"><span class="glyphicon glyphicon-file"></span>Challenge case description</a> <br>
+<a href="https://github.com/GabrielaMichelon/git-ecco/tree/challenge" target="_new"><span class="glyphicon glyphicon-folder-open"></span> Repository of source code and more information</a> <br>
+<a href="https://zenodo.org/record/4586774#.YGHe6xI6_JE" target="_new"><span class="glyphicon glyphicon-folder-open"></span> Repository to get datasets</a> <br>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
+
+<div id="solutions" class="container-fluid bg-grey">
+  <div class="row">
+     <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Solutions</h2>
+No solutions yet.
+    </div>
+	<div class="col-sm-2"></div>
+  </div>
+</div>
+
+<div id="discussion" class="container-fluid bg-grey">
+  <div class="row">
+     <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Discussion</h2>
+No discussion section for the moment.
+   </div>
+	<div class="col-sm-2"></div>
+  </div>
+</div>
+
+
+
+<footer class="container-fluid text-center">
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#mainPage']").on('click', function(event) {
+
+	// Store hash
+	var hash = this.hash;
+	if (typeof $(hash).offset() !== 'undefined') {
+	  
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  }
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>

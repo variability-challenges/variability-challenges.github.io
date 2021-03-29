@@ -38,6 +38,21 @@
 
 <div id="intro" class="container-fluid">
   <div class="row">
+  <div class="col-sm-2"></div>
+   <div class="col-sm-8" style="text-align:center">
+<h2>Community</h2>
+        <h4><span class="label label-info"><span class="glyphicon glyphicon glyphicon-user"></span><span class="glyphicon glyphicon glyphicon-user"></span><span class="glyphicon glyphicon glyphicon-user"></span></span></h4>
+        The SPLC challenge track aims at providing the software product-line (SPL) community with a set of case studies that tackle relevant SPL problems and challenge the state of the art. The challenge track was established with SPLC 2018 in Gothenburg, initiated by Sarah Nadi, Timo Kehrer, and Thorsten Berger.<br/>
+The challenge is organized in two phases every year. The first phase is the call for cases. Submitted cases will be reviewed by the challenge co-chairs to ensure that all required information is clearly described. Accepted cases will be part of the official conference proceedings. Authors of the accepted cases must attend the challenge track and participate in the discussion. The second phase is a call for solutions to both newly accepted as well as previously accepted cases. Submitted case solutions will be peer-reviewed by the challenge program committee. Accepted solutions will also be part of the official conference proceedings. Authors of accepted solutions must present their papers during the conference.<br/>
+<br/>
+        You are highly encouraged to contribute to this website. For example by collecting references to challenge solutions outside the SPLC challenge track. You can propose any improvement or correction by direct editing the <a href="https://github.com/variability-challenges/variability-challenges.github.io" target="_new">github-based website</a> and creating a pull request , creating a <a href="https://github.com/variability-challenges/variability-challenges.github.io/issues/new" target="_new">github issue</a>, or just sending an email to the challenge track co-chairs.
+   </div>
+  </div>
+  </div>
+</div>
+
+<div id="intro" class="container-fluid">
+  <div class="row">
   <div class="col-sm-1"></div>
    <div class="col-sm-2" style="text-align:center">
    <i>Current SPLC</i><br/>
@@ -47,24 +62,36 @@
    Iris Reinhartz-Berger, University of Haifa, IL<br/>
    </div>
     <div class="col-sm-7">
-     
+         
     <h1>SPLC 2021</h1>
-         <h4><span class="label label-warning">Call for Cases is Open</span></h4>
-        <!--<h4><span class="label label-warning">Extended deadline: 21 February 2020</span></h4>-->
+         <h4><span class="label label-warning">Call for Solution is Open</span></h4>
+        <!--<h4><span class="label label-warning">deadline: June 11, 2021</span></h4>-->
         Submission instructions: <a href="http://splc2021.net/call-for-papers/call-for-challenge-cases/" target="_new">http://splc2021.net/call-for-papers/call-for-challenge-cases/</a>
        <!--  <h4>Please note that the call for solutions also includes the accepted challenges of previous years (i.e., SPLC 2018)</h4>
     We highly encourage community members to provide solutions for the challenges of SPLC 2019 and SPLC 2018. Solutions will be included in the conference proceedings, and presented during the conference.<br/>
     <b>Deadline for Challenge solutions: <del>28 May 2019</del> Extended: 4 June 2019</b><br/>
     -->
-    <h2>Community</h2>
-        <h4><span class="label label-info"><span class="glyphicon glyphicon glyphicon-user"></span><span class="glyphicon glyphicon glyphicon-user"></span><span class="glyphicon glyphicon glyphicon-user"></span></span></h4>
-        The SPLC challenge track aims at providing the software product-line (SPL) community with a set of case studies that tackle relevant SPL problems and challenge the state of the art. The challenge track was established with SPLC 2018 in Gothenburg, initiated by Sarah Nadi, Timo Kehrer, and Thorsten Berger.<br/>
-The challenge is organized in two phases every year. The first phase is the call for cases. Submitted cases will be reviewed by the challenge co-chairs to ensure that all required information is clearly described. Accepted cases will be part of the official conference proceedings. Authors of the accepted cases must attend the challenge track and participate in the discussion. The second phase is a call for solutions to both newly accepted as well as previously accepted cases. Submitted case solutions will be peer-reviewed by the challenge program committee. Accepted solutions will also be part of the official conference proceedings. Authors of accepted solutions must present their papers during the conference.<br/>
-<br/>
-        You are highly encouraged to contribute to this website. For example by collecting references to challenge solutions outside the SPLC challenge track. You can propose any improvement or correction by direct editing the <a href="https://github.com/variability-challenges/variability-challenges.github.io" target="_new">github-based website</a> and creating a pull request , creating a <a href="https://github.com/variability-challenges/variability-challenges.github.io/issues/new" target="_new">github issue</a>, or just sending an email to the challenge track co-chairs.  
-    </div>
+        
+    <h1>Challenges</h1>
+  
+    <h3>Variability Fault Localization: A Benchmark</h3>
+    <i>Kien-Tuan Ngo, Thu-Trang Nguyen, Son Nguyen, Hieu Dinh Vo </i><br/>
+    <a href="./2021/FaultLocalizationBenchmark/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
+    
+    Software fault localization is one of the most expensive, tedious, and time-consuming activities in program debugging. This activity becomes even much more challenging in Software Product Line (SPL) systems due to the variability of failures in SPL systems. These unexpected behaviors are caused by variability faults which can only be exposed under some combinations of system features. Although localizing bugs in non-configurable code has been investigated in-depth, variability fault localization in SPL systems still remains mostly unexplored. To approach this challenge, we propose a benchmark for variability fault localization with a large set of 1,773 buggy versions of six SPL systems and baseline variability fault localization performance results. Our hope is to engage the community to propose new and better approaches to the problem of variability fault localization in SPL systems.
+
+    <br/> 
+      <h3>Managing Systems Evolving in Space and Time: Four Challenges for Maintenance, Evolution and Composition of Variants</h3>
+    <i>Gabriela Karoline Michelon, David Obermann, Wesley K. G. Assunção, Lukas Linsbauer, Paul Grünbacher, Alexander Egyed</i><br/>
+
+    <a href="./2021/SystemsEvolvingTimeSpace/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
+
+    Software companies need to provide a large set of features satisfying functional and non-functional requirements of diverse customers, thereby leading to variability in space. Feature location techniques have been proposed to support software maintenance and evolution in space. However, so far only one feature location technique also analyses the evolution in time of system variants, which is required for feature enhancements and bug fixing. Specifically, existing tools for managing a set of systems over time do not offer proper support for keeping track of feature revisions, updating existing variants, and creating new product configurations based on feature revisions. This paper presents four challenges concerning such capabilities for feature (revision) location and composition of new product configurations based on feature/s (revisions). We also provide a benchmark containing a ground truth and support for computing metrics. We hope that this will motivate researchers to provide and evaluate tool-supported approaches aiming at managing systems evolving in space and time. Further, we do not limit the evaluation of techniques to only this benchmark: we introduce and provide instructions on how to use a benchmark extractor for generating ground truth data for other systems. We expect that the feature (revision) location techniques maximize information retrieval in terms of precision, recall, and F-score, while keeping execution time and memory consumption low.
+    <br/> 
+        </div>
 	<div class="col-sm-2"></div>
   </div>
+  
 </div>
 
 <div id="intro" class="container-fluid">
@@ -92,6 +119,7 @@ Configurable software systems can be adapted or configured according to a set of
 
 A microservice implements a small unit of functionality that it provides through a network using lightweight protocols. So, microservices can be combined to fulfill tasks and implement features of a larger software system - resembling a variability mechanism in the context of a software product line (SPL). Microservices and SPLs have similar goals, namely facilitating reuse and customizing, but they are usually employed in different contexts. Any developer who has access to the network can provide a microservice for any task, while SPLs are usually intended to implement features of a single domain. Due to their different concepts, using microservices to implement an SPL or adopting SPL practices (e.g., variability management) for microservices is a challenging cross-area research problem. However, both techniques can complement each other, and thus tackling this problem promises benefits for organizations that employ either technique. In this paper, we reason on the importance of advancing in this direction, and sketch six concrete challenges to initiate research, namely (1) feature identification, (2) variability modeling, (3) variable microservice architectures, (4) interchangeability, (5) deep customization, and (6) re-engineering an SPL. We intend these challenges to serve as a starting point for future research in this cross-area research direction---avoiding that the concepts of one area are reinvented in the other.
 <br/> 
+
 <h3>A BDD for Linux? The Knowledge Compilation Challenge for Variability</h3>
 <i>Thomas Thüm</i><br/>
 
