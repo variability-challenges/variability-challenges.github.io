@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Variability Challenges</title>
+  <title>ArgoUMLSPL Challenge</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -20,188 +20,146 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#mainPage"></a>
+      <a class="navbar-brand" href="../../index.html">Variability Challenges</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <!-- <li><a href="#intro">Intro</a></li>
-		<li><a href="#edition">Editions</a></li> -->
+        <li><a href="#abstract">Abstract</a></li>
+		<li><a href="#material">Material</a></li>
+		<li><a href="#solutions">Solutions</a></li>
+		<li><a href="#discussion">Discussion</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <div class="jumbotron text-center">
-<h1>Variability Challenges</h1>
-<h3>Systems and Software Variability Challenges<br/><i>The official website of the Systems and Software Product Line Conference challenge track</i></h3>
+<h4>SPLC 2018 Challenge</h4>
+<h2>Feature Location Benchmark with ArgoUML SPL</h2>
+Jabier Martinez, Sorbonne Université, CNRS, LIP6, France<br/>
+Nicolas Ordoñez, Universidad Nacional de Colombia, Colombia<br/>
+Xhevahire Tërnava, Sorbonne Université, CNRS, LIP6, France<br/>
+Tewfik Ziadi, Sorbonne Université, CNRS, LIP6, France<br/>
+Jairo Aponte, Universidad Nacional de Colombia, Colombia<br/>
+Eduardo Figueiredo, Universidade Federal de Minas Gerais, Brazil<br/>
+Marco Tulio Valente, Universidade Federal de Minas Gerais, Brazil<br/>
 </div>
 
-<div id="intro" class="container-fluid">
+<div id="abstract" class="container-fluid">
   <div class="row">
-  <div class="col-sm-2"></div>
-   <div class="col-sm-8" style="text-align:center">
-<h2>Community</h2>
-        <h4><span class="label label-info"><span class="glyphicon glyphicon glyphicon-user"></span><span class="glyphicon glyphicon glyphicon-user"></span><span class="glyphicon glyphicon glyphicon-user"></span></span></h4>
-        The SPLC challenge track aims at providing the software product-line (SPL) community with a set of case studies that tackle relevant SPL problems and challenge the state of the art. The challenge track was established with SPLC 2018 in Gothenburg, initiated by Sarah Nadi, Timo Kehrer, and Thorsten Berger.<br/>
-The challenge is organized in two phases every year. The first phase is the call for cases. Submitted cases will be reviewed by the challenge co-chairs to ensure that all required information is clearly described. Accepted cases will be part of the official conference proceedings. Authors of the accepted cases must attend the challenge track and participate in the discussion. The second phase is a call for solutions to both newly accepted as well as previously accepted cases. Submitted case solutions will be peer-reviewed by the challenge program committee. Accepted solutions will also be part of the official conference proceedings. Authors of accepted solutions must present their papers during the conference.<br/>
-<br/>
-        You are highly encouraged to contribute to this website. For example by collecting references to challenge solutions outside the SPLC challenge track. You can propose any improvement or correction by direct editing the <a href="https://github.com/variability-challenges/variability-challenges.github.io" target="_new">github-based website</a> and creating a pull request , creating a <a href="https://github.com/variability-challenges/variability-challenges.github.io/issues/new" target="_new">github issue</a>, or just sending an email to the challenge track co-chairs.
-   </div>
-  </div>
-  </div>
-</div>
-
-<div id="intro" class="container-fluid">
-  <div class="row">
-  <div class="col-sm-1"></div>
-   <div class="col-sm-2" style="text-align:center">
-   <i>Current SPLC</i><br/>
-   <a href="http://www.splc2021.net/" target="_new"><img style="width:70%" src="./files/SPLC_2021.svg"></a><br/>
-   <i>Challenge track co-chairs</i><br/>
-   Paul Temple, University of Namur, BE<br/>
-   Iris Reinhartz-Berger, University of Haifa, IL<br/>
-   </div>
+    <div class="col-sm-1"></div>
+   <div class="col-sm-2" style="text-align:center"><a href="https://github.com/but4reuse/argouml-spl-benchmark" target="_new"><img style="width:70%" src="./files/logo.png"></a></div>
     <div class="col-sm-7">
-         
-    <h1>SPLC 2021</h1>
-         <h4><span class="label label-warning">Call for Solution is Closed for now</span></h4>
-        <!--<h4><span class="label label-warning">deadline: June 11, 2021</span></h4>-->
-        Submission instructions: <a href="https://splc2021.net/call-for-papers/call-for-challenge-solutions" target="_new">http://splc2021.net/call-for-papers/call-for-challenge-solutions/</a>
-       <!--  <h4>Please note that the call for solutions also includes the accepted challenges of previous years (i.e., SPLC 2018)</h4>
-    We highly encourage community members to provide solutions for the challenges of SPLC 2019 and SPLC 2018. Solutions will be included in the conference proceedings, and presented during the conference.<br/>
-    <b>Deadline for Challenge solutions: <del>28 May 2019</del> Extended: 4 June 2019</b><br/>
-    -->
-        
-    <h1>Challenges</h1>
-  
-    <h3>Variability Fault Localization: A Benchmark</h3>
-    <i>Kien-Tuan Ngo, Thu-Trang Nguyen, Son Nguyen, Hieu Dinh Vo </i><br/>
-    <a href="./2021/FaultLocalizationBenchmark/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
-    
-    Software fault localization is one of the most expensive, tedious, and time-consuming activities in program debugging. This activity becomes even much more challenging in Software Product Line (SPL) systems due to the variability of failures in SPL systems. These unexpected behaviors are caused by variability faults which can only be exposed under some combinations of system features. Although localizing bugs in non-configurable code has been investigated in-depth, variability fault localization in SPL systems still remains mostly unexplored. To approach this challenge, we propose a benchmark for variability fault localization with a large set of 1,773 buggy versions of six SPL systems and baseline variability fault localization performance results. Our hope is to engage the community to propose new and better approaches to the problem of variability fault localization in SPL systems.
-
-    <br/> 
-      <h3>Managing Systems Evolving in Space and Time: Four Challenges for Maintenance, Evolution and Composition of Variants</h3>
-    <i>Gabriela Karoline Michelon, David Obermann, Wesley K. G. Assunção, Lukas Linsbauer, Paul Grünbacher, Alexander Egyed</i><br/>
-
-    <a href="./2021/SystemsEvolvingTimeSpace/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
-
-    Software companies need to provide a large set of features satisfying functional and non-functional requirements of diverse customers, thereby leading to variability in space. Feature location techniques have been proposed to support software maintenance and evolution in space. However, so far only one feature location technique also analyses the evolution in time of system variants, which is required for feature enhancements and bug fixing. Specifically, existing tools for managing a set of systems over time do not offer proper support for keeping track of feature revisions, updating existing variants, and creating new product configurations based on feature revisions. This paper presents four challenges concerning such capabilities for feature (revision) location and composition of new product configurations based on feature/s (revisions). We also provide a benchmark containing a ground truth and support for computing metrics. We hope that this will motivate researchers to provide and evaluate tool-supported approaches aiming at managing systems evolving in space and time. Further, we do not limit the evaluation of techniques to only this benchmark: we introduce and provide instructions on how to use a benchmark extractor for generating ground truth data for other systems. We expect that the feature (revision) location techniques maximize information retrieval in terms of precision, recall, and F-score, while keeping execution time and memory consumption low.
-    <br/> 
+    Feature location is a traceability recovery activity to identify the implementation elements associated to a characteristic of a system. Besides its relevance for software maintenance of a single system, feature location in a collection of systems received a lot of attention as a first step to re-engineer system variants (created through clone-and-own) into a Software Product Line (SPL). In this context, the objective is to unambiguously identify the boundaries of a feature inside a family of systems to later create reusable assets from these implementation elements. Among all the case studies in the SPL literature, variants derived from ArgoUML SPL stands out as the most used one. However, the use of different settings, or the omission of relevant information (e.g., the exact configurations of the variants or the way the metrics are calculated), makes it difficult to reproduce or benchmark the different feature location techniques even if the same ArgoUML SPL is used. With the objective to foster the research area on feature location, we provide a set of common scenarios using ArgoUML SPL and a set of utils to obtain metrics based on the results of existing and novel feature location techniques.<br/>
         </div>
-	<div class="col-sm-2"></div>
-  </div>
-  
-</div>
-
-<div id="intro" class="container-fluid">
-  <div class="row">
-  <div class="col-sm-1"></div>
-   <div class="col-sm-2" style="text-align:center"><a href="http://www.splc2020.net/" target="_new"><img style="width:70%" src="./files/SPLC_2020.png"></a><br/>
-      <i>Challenge track co-chairs</i><br/>
-   José A. Galindo, University of Seville, Spain<br/>
-   Lukas Linsbauer, Technische Universität Braunschweig, Germany<br/>
-   </div>
-    <div class="col-sm-7">
-    <h1>Challenges</h1>
-       
-<h3>Testing Configurable Software Systems: The Failure Observation Challenge</h3>
-<i>Fischer Ferreira, Markos Viggiato, MaurÍcio Souza and Eduardo Figueiredo. </i><br/>
-<a href="./2020/Testing/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
-
-Configurable software systems can be adapted or configured according to a set of features to increase reuse and productivity. The testing process is essential because configurations that fail may potentially hurt user experience and degrade the reputation of a project. However, testing configurable systems is very challenging due to the number of configurations to run with each test, leading to a combinatorial explosion in the number of configurations and tests. Currently, several testing techniques and tools have been proposed to deal with this challenge, but their potential practical application remains mostly unexplored. To encourage the research area on testing configurable systems, researchers and practitioners should be able to try out their solutions in common datasets. In this paper, we propose a dataset with 30 configurable software systems and extensive test suits. Moreover, we report failures found in these systems and source code metrics to allow evaluating candidate solutions. We hope to engage the community and stimulate new and existing approaches to the problem of testing configurable systems.
-
-<br/> 
-<h3>Variability Management meets Microservices: Six Challenges of Re-Engineering Microservice-Based Webshops</h3>
-<i>Wesley K. G. Assunção, Jacob Krüger and Willian D. F. Mendonça</i><br/>
-
-<a href="./2020/Microservices/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
-
-A microservice implements a small unit of functionality that it provides through a network using lightweight protocols. So, microservices can be combined to fulfill tasks and implement features of a larger software system - resembling a variability mechanism in the context of a software product line (SPL). Microservices and SPLs have similar goals, namely facilitating reuse and customizing, but they are usually employed in different contexts. Any developer who has access to the network can provide a microservice for any task, while SPLs are usually intended to implement features of a single domain. Due to their different concepts, using microservices to implement an SPL or adopting SPL practices (e.g., variability management) for microservices is a challenging cross-area research problem. However, both techniques can complement each other, and thus tackling this problem promises benefits for organizations that employ either technique. In this paper, we reason on the importance of advancing in this direction, and sketch six concrete challenges to initiate research, namely (1) feature identification, (2) variability modeling, (3) variable microservice architectures, (4) interchangeability, (5) deep customization, and (6) re-engineering an SPL. We intend these challenges to serve as a starting point for future research in this cross-area research direction---avoiding that the concepts of one area are reinvented in the other.
-<br/> 
-
-<h3>A BDD for Linux? The Knowledge Compilation Challenge for Variability</h3>
-<i>Thomas Thüm</i><br/>
-
-<a href="./2020/Linux/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
-What is the number of valid configurations for Linux? How to generate uniform random samples for Linux? Can we create a binary decision diagram for Linux? It seems that the product-line community tries hard to answer such questions for Linux and other configurable systems. However, attempts are often not published due to the publication bias; unsuccessful attempts are not published. As a consequence, researchers keep trying by potentially spending redundant effort.
-<br/> 
-       </div>
-	<div class="col-sm-2"></div>
-  </div>
-</div>
-
-<div id="intro" class="container-fluid">
-  <div class="row">
-  <div class="col-sm-1"></div>
-   <div class="col-sm-2" style="text-align:center"><a href="http://www.splc2019.net/" target="_new"><img style="width:70%" src="./files/SPLC_2019.png"></a><br/>
-      <i>Challenge track co-chairs</i><br/>
-   Jabier Martinez, Tecnalia, Spain<br/>
-   Timo Kehrer, Humboldt-Universität zu Berlin, Germany<br/>
-   </div>
-    <div class="col-sm-7">
-    <h1>Challenges</h1>
-       
-<h3>Applying Product Line Engineering Concepts to Deep Neural Networks</h3>
-<i>Javad Ghofrani, Ehsan Kozegar, Anna Lena Fehlhaber, and Mohammad Divband Soorati</i><br/>
-<a href="./2019/DeepNeuralNetworks/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
-Deep Neural Networks (DNNs) are increasingly being used as a machine learning solution thanks to the complexity of their architecture and hyperparameters-weights. A drawback is the excessive demand for massive computational power during the training process. Not only as a whole but parts of neural networks can also be in charge of certain functionalities. We present a novel challenge in an intersection between machine learning and variability management communities to reuse modules of DNNs without further training. Let us assume that we are given a DNN for image processing that recognizes cats and dogs. By extracting a part of the network, without additional training a new DNN should be divisible with the functionality of recognizing only cats. Existing research in variability management can offer a foundation for a product line of DNNs composing the reusable functionalities. An ideal solution can be evaluated based on its speed, granularity of determined functionalities, and the support for adding variability to the network. The challenge is decomposed in three subchallenges: feature extraction, feature abstraction, and the implementation of a product line of DNNs.
-<br/> 
-
-<h3>Product Sampling for Product Lines: The Scalability Challenge</h3>
-<i>Tobias Pett, Thomas Thüm, Tobias Runge, Sebastian Krieter, Malte Lochau, and Ina Schaefer</i><br/>
-<a href="./2019/Sampling/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
-Quality assurance for product lines is often infeasible for each product separately. Instead, often only a subset of all products (i.e. a sample) is considered in testing such that at least the coverage of certain feature interactions is guaranteed. While pair-wise interaction sampling covers all interactions between two features, its generalization to t-wise interaction sampling ensures coverage for all interactions among t features. However, sampling for large product lines poses a challenge, as today’s algorithms tend to run out of memory, do not terminate, or produce samples, which are too large to be tested. To approach this challenge, we provide a set of large real-world feature-models with up-to 19 thousand features, which are supposed to be sampled. The performance of the sampling is evaluated based on the time and memory consumed to retrieve a sample and the sample size for a given coverage (i.e. t value). A well-performing sampling algorithm achieves full t-wise coverage, while minimizing all three of these properties.
-<br/> 
-        
-       </div>
-	<div class="col-sm-2"></div>
+	<div class="col-sm-2">
+	</div>
   </div>
 </div>
 
 
-<div id="intro" class="container-fluid">
+<div id="material" class="container-fluid">
   <div class="row">
-  <div class="col-sm-1"></div>
-   <div class="col-sm-2" style="text-align:center">
-   <a href="http://www.splc2018.net/" target="_new"><img style="width:70%" src="./files/SPLC_2018.png"></a><br/>
-   <i>Challenge track co-chairs</i><br/>
-   Sarah Nadi, University of Alberta, Canada<br/>
-   Timo Kehrer, Humboldt-Universität zu Berlin, Germany<br/>
-   </div>
+   <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
     <div class="col-sm-7">
+<h2>Material</h2>
+<a href="https://doi.org/10.1145/3233027.3236402" target="_new"><span class="glyphicon glyphicon-file"></span> Challenge paper</a> <br>
+<a href="https://github.com/but4reuse/argouml-spl-benchmark" target="_new"><span class="glyphicon glyphicon-folder-open"></span> Repository of source code and more information</a> <br>
+<a href="https://www.youtube.com/watch?v=fJS7RSOGui0" target="_new"><span class="glyphicon glyphicon-facetime-video"></span> Video with an overview of the challenge</a> <br>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/fJS7RSOGui0">
+</iframe>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
 
-    <h3>Apo-Games – A Case Study for Reverse Engineering Variability from Cloned Java Variants</h3>
-<i>Jacob Krüger, Wolfram Fenske, Thomas Thüm, Dirk Aporius, Gunter Saake, and Thomas Leich</i><br/>
-<a href="./2018/ApoGames/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
-Software-product-line engineering is an approach to systematically manage reusable software features and has been widely adopted in practice. Still, in most cases, organizations start with a single product that they clone and modify when new customer requirements arise (a.k.a. clone-and-own). With an increasing number of variants, maintenance can become challenging and organizations may consider migrating towards a software product line, which is referred to as extractive approach. While this is the most common approach in practice, techniques to extract variability from cloned variants still fall short in several regards. In particular, this accounts for the low accuracy of automated analyses and refactoring, our limited understanding of the costs involved, and the high manual effort. A main reason for these limitations is the lack of realistic case studies. To tackle this problem, we provide a set of cloned variants. In this paper, we characterize these variants and challenge the research community to apply techniques for reverse engineering feature models, feature location, code smell analysis, architecture recovery, and the migration towards a software product line. By evaluating solutions with the developer of these variants, we aim to contribute to a larger body of knowledge on this real-world case study.<br/>
+<div id="solutions" class="container-fluid bg-grey">
+  <div class="row">
+     <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Solutions</h2>
+
+
+<h3>Spectrum-Based Feature Localization: A Case Study using ArgoUML</h3>
+<i>Gabriela K. Michelon, Bruno Sotto-Mayor, Jabier Martinez, Aitor Arrieta, Rui Abreu and Wesley K. G. Assunção</i><br/>
+SPLC 2021 Solution<br/>
+Feature localization (FL) is a basic activity in re-engineering legacy systems into software product lines. In this work, we explore the use of the Spectrum-based localization technique for this task. This
+technique is traditionally used for fault localization but with practical applications in other tasks like the dynamic FL approach that we propose. The ArgoUML SPL benchmark is used as a case study
+and we compare it with a previous hybrid (static and dynamic) approach from which we reuse the manual and testing execution traces of the features. We conclude that it is feasible and sound to
+use the Spectrum-based approach providing promising results in the benchmark metrics.<br/>
+<a href="https://doi.org/10.1145/3461001.3473065" target="_new"><span class="glyphicon glyphicon-file"></span> Solution paper</a> <br>
+<a href="https://www.youtube.com/watch?v=rCCEkDPdFbE" target="_new"><span class="glyphicon glyphicon-facetime-video"></span>Video presentation of the solution</a> <br>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/rCCEkDPdFbE">
+
+</iframe>
 <br/>
-
-<h3>Feature Location Benchmark with ArgoUML SPL</h3>
-<i>Jabier Martinez, Nicolas Ordoñez, Xhevahire Tërnava, Tewfik Ziadi, Jairo Aponte, Eduardo Figueiredo, and Marco Tulio Valente</i><br/>
-<a href="./2018/ArgoUMLSPL/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
-Feature location is a traceability recovery activity to identify the implementation elements associated to a characteristic of a system. Besides its relevance for software maintenance of a single system, feature location in a collection of systems received a lot of attention as a first step to re-engineer system variants (created through clone-and-own) into a Software Product Line (SPL). In this context, the objective is to unambiguously identify the boundaries of a feature inside a family of systems to later create reusable assets from these implementation elements. Among all the case studies in the SPL literature, variants derived from ArgoUML SPL stands out as the most used one. However, the use of different settings, or the omission of relevant information (e.g., the exact configurations of the variants or the way the metrics are calculated), makes it difficult to reproduce or benchmark the different feature location techniques even if the same ArgoUML SPL is used. With the objective to foster the research area on feature location, we provide a set of common scenarios using ArgoUML SPL and a set of utils to obtain metrics based on the results of existing and novel feature location techniques.<br/>
+<h3>A Graph-Based Feature Location Approach Using Set Theory</h3>
+<i>Richard Müller and Ulrich Eisenecker</i><br/>
+SPLC 2019 Solution<br/>
+The ArgoUML SPL benchmark addresses feature location in Software Product Lines (SPLs), where single features as well as feature combinations and feature negations have to be identified. We present a solution for this challenge using a graph-based approach and set theory. The results are promising. Set theory allows to exactly define which parts of feature locations can be computed and which precision and which recall can be achieved. This has to be complemented by a reliable identification of feature-dependent class and method traces as well as refinements. The application of our solution to one scenario of the benchmark supports this claim.<br/>
+<a href="https://doi.org/10.1145/3336294.3342358" target="_new"><span class="glyphicon glyphicon-file"></span> Solution paper</a> <br>
+<a href="./files/solutions/Slides_2019_SPLC_Muller.pdf" target="_new"><span class="glyphicon glyphicon-blackboard"></span> Slides</a> <br>
 <br/>
-
-<h3>Interoperability of Software Product Line Variants</h3>
-<i>Ferruccio Damiani, Reiner Hähnle, Eduard Kamburjan, and Michael Lienhardt</i><br/>
-<a href="./2018/InteroperabilitySPLVariants/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
-Software Product Lines are an established mechanism to describe multiple variants of one software product. Current approaches however, do not offer a mechanism to support the use of multiple variants from one product line in the same application. We experienced the need for such a mechanism in an industry project with German Railways where we do not merely model a highly variable system, but a system with highly variable subsystems. We present the design challenges that arise when software product lines have to support the use of multiple variants in the same application, in particular: How to reference multiple variants, how to manage multiple variants to avoid name clashes, and how to keep multiple variants interoperable.<br/>
-<br/>
-
-<h3>Localizing Configurations in Highly-Configurable Systems</h3>
-<i>Paul Gazzillo, Ugur Koc, Thanhvu Nguyen, and Shiyi Wei</i><br/>
-<a href="./2018/LocalizingConfigurations/index.html" target="_new"><span class="glyphicon glyphicon-arrow-right"></span> Challenge and Solutions site</a><br/>
-The complexity of configurable systems has grown immensely, and it is only getting more complex. Such systems are a challenge for software testing and maintenance, because bugs and other defects can and do appear in any configuration. One common requirement for many development tasks is to identify the configurations that lead to a given defect or some other program behavior. We distill this requirement down to a challenge question: given a program location in a source file, what are valid configurations that include the location? The key obstacle is scalability. When there are thousands of configuration options, enumerating all combinations is exponential and infeasible. We provide a set of target programs of increasing difficulty and variations on the challenge question so that submitters of all experience levels can try out solutions. Our hope is to engage the community and stimulate new and interesting approaches to the problem of analyzing configurations.<br/>
-<br/>
-
+<h3>Comparison-Based Feature Location in ArgoUML Variants</h3>
+<i>	Gabriela Karoline Michelon, Lukas Linsbauer, Wesley Klewerton Guez Assunção and Alexander Egyed</i><br/>
+SPLC 2019 Solution<br/>
+Identifying and extracting parts of a system’s implementation for reuse is an important task for re-engineering system variants into Software Product Lines (SPLs). An SPL is an approach that enables systematic reuse of existing assets across related product variants. The re-engineering process to adopt an SPL from a set of individual variants starts with the location of features and their implementation, to be extracted and migrated into an SPL and reused in new variants. Therefore, feature location is of fundamental importance to the success in the adoption of SPLs. Despite its importance, existing feature location techniques struggle with huge, complex, and numerous system artifacts. This is the scenario of ArgoUML-SPL, which stands out as the most used case study for the validation of feature location approaches. In this paper we use an automated feature location technique and apply it to the ArgoUML feature location challenge posed.<br/>
+<a href="https://doi.org/10.1145/3336294.3342360" target="_new"><span class="glyphicon glyphicon-file"></span> Solution paper</a> <br>
+<a href="./files/solutions/Slides_2019_SPLC_Michelon.pdf" target="_new"><span class="glyphicon glyphicon-blackboard"></span> Slides</a> <br>
     </div>
 	<div class="col-sm-2"></div>
   </div>
 </div>
 
+<div id="discussion" class="container-fluid bg-grey">
+  <div class="row">
+     <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Discussion</h2>
+<h4>References outside the SPLC Challenge track</h4>
+Previous to the Challenge paper, we can find many references to the case study.<br>
+ArgoUML SPL case study has its own entry in the <a href="https://but4reuse.github.io/espla_catalog/" target="_new">ESPLA Catalog <span class="glyphicon glyphicon-new-window"></span></a> (extractive SPL adoption catalog of case studies).<br>
+The following entries explicitly mention using the benchmark.<br>
+<br>
+<b>Gabriela K. Michelon, Lukas Linsbauer, Wesley K.G. Assunção, Stefan Fischer, Alexander Egyed. VaMoS 2021</b><br>
+<b>A Hybrid Feature Location Technique for Re-engineering Single Systems into Software Product Lines</b><br>
+A combination of a dynamic analysis exercising the features in the GUI or through tests and static analysis using the ECCO tool. Metrics are provided using the benchmark traces, and also at method and line levels.</br>
+<a href="https://doi.org/10.1145/3442391.3442403" target="_new"><span class="glyphicon glyphicon-file"></span> Paper</a> <br>
+<a href="./files/solutions/Slides_2021_VaMoS_Michelon.pdf" target="_new"><span class="glyphicon glyphicon-blackboard"></span> Slides</a> <br>
+   <br>
+<b>Johann Mortara, Xhevahire Tërnava, Philippe Collet. VaMoS 2020</b><br>
+<b>Mapping features to automatically identified object-oriented variability implementations: the case of ArgoUML-SPL</b><br>
+The <a href="https://github.com/DeathStar3/symfinder"  target="_new"> symfinder tool <span class="glyphicon glyphicon-new-window"></span></a> statically analyses patterns in the Java source code of the original ArgoUML (the scenario with just one product) for potential variability. They conducted a manual mapping from these candidates to ArgoUML-SPL features. Promising results at Java class level using the benchmark ground-truth (adapted to work only at Java class level).</br>
+<a href="https://doi.org/10.1145/3377024.3377037" target="_new"><span class="glyphicon glyphicon-file"></span> Paper</a> <br>
+<a href="./files/solutions/Slides_2020_VaMoS_Mortara.pdf" target="_new"><span class="glyphicon glyphicon-blackboard"></span> Slides</a> <br>
+   <br>
+<b>Abdul Razzaq, Andrew Le Gear, Chris Exton, Jim Buckley. Empirical Software Engineering (EMSE) journal, published 2019</b><br>
+<b>An empirical assessment of baseline feature location techniques</b><br>
+<a href="https://doi.org/10.1007/s10664-019-09734-5" target="_new"><span class="glyphicon glyphicon-file"></span> Paper</a> <br>
+   <br>
+<b>Daniel Cruz, Eduardo Figueiredo, Jabier Martinez. VaMoS 2019</b><br>
+<b>A Literature Review and Comparison of Three Feature Location Techniques using ArgoUML-SPL</b><br>
+Among the contributions of this work, we can find some directly related to their use of the ArgoUML-SPL benchmark<br>
+<ul>
+  <li>A characterization of generated variants regarding the textual information that they contain. This information is relevant as this is the primary source for text-based information retrieval techniques.</li>
+  <li>A comparison of three text-based information retrieval techniques (Paragraph Vectors, Latent Dirichlet Allocation, and Latent Semantic Indexing) using only the feature names as queries and documents pre-processing.</li>
+  <li>The results suggest that Latent Semantic Indexing (LSI) outperforms the other two in this benchmark. However, precision, recall, and F-Measure have very low values (0.16, 0.19, and 0.079 respectively). This suggests that text-based information retrieval techniques should be combined with other techniques forming hybrid feature location techniques, and that LSI seems to be a good candidate for the text-based information retrieval part.</li>
+  <li>The implementation of the techniques are publicly available: <a href="https://github.com/DVSCross/TextualIRFeaturesImpl" target="_new">https://github.com/DVSCross/TextualIRFeaturesImpl <span class="glyphicon glyphicon-new-window"></span></a></li>
+</ul>
+<a href="https://doi.org/10.1145/3302333.3302343" target="_new"><span class="glyphicon glyphicon-file"></span> Paper</a> <br>
+<a href="./files/solutions/Slides_2019_VaMoS_Cruz.pdf" target="_new"><span class="glyphicon glyphicon-blackboard"></span> Slides</a> <br>
+   </div>
+	<div class="col-sm-2"></div>
+  </div>
+</div>
+
+
+
 <footer class="container-fluid text-center">
-Variability challenges and solutions repository is maintained by <a href="https://sites.google.com/site/jabiermartinezwebsite/home" target="_new">Jabier Martinez</a> and <a href="https://www.informatik.hu-berlin.de/de/forschung/gebiete/mse/mitarb/kehrerti.html" target="_new">Timo Kehrer</a>
 </footer>
 
 <script>
@@ -209,11 +167,12 @@ $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#mainPage']").on('click', function(event) {
 
+	// Store hash
+	var hash = this.hash;
+	if (typeof $(hash).offset() !== 'undefined') {
+	  
     // Prevent default anchor click behavior
     event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
 
     // Using jQuery's animate() method to add smooth page scroll
     // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
@@ -224,6 +183,7 @@ $(document).ready(function(){
       // Add hash (#) to URL when done scrolling (default click behavior)
       window.location.hash = hash;
     });
+  }
   });
   
   $(window).scroll(function() {
