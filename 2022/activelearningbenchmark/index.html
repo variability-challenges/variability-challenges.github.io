@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Testing Challenge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body id="mainPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../../index.html">Variability Challenges</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#abstract">Abstract</a></li>
+		<li><a href="#material">Material</a></li>
+		<li><a href="#solutions">Solutions</a></li>
+		<li><a href="#discussion">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+<h4>SPLC 2022 Challenge</h4>
+<h2>A Benchmark for Active Learning of Variability-Intensive Systems</h2>
+Shaghayegh Tavassoli, University of Tehran Tehran, Iran</br>
+Carlos Diego Nascimento Damasceno, Radboud University Nijmegen Nijmegen, Netherlands </br>
+Mohammad Reza Mousavi, King’s College London London, United Kingdom</br>
+Ramtin Khosravi, University of Tehran Tehran, Iran
+</div>
+
+<div id="abstract" class="container-fluid">
+  <div class="row">
+  <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+      Behavioral models are the key enablers for behavioral analysis of Software Product Lines (SPL), including testing and model checking. Active model learning comes to the rescue when family behavioral models are non-existent or outdated. A key challenge on active model learning is to detect commonalities and variability efficiently and combine them into concise family models. Benchmarks and their associated metrics will play a key role in shaping the research agenda in this promising field and provide an effective means for comparing and identifying relative strengths and weaknesses in the forthcoming techniques. In this challenge, we seek benchmarks to evaluate the efficiency (e.g., learning time and memory footprint) and effectiveness (e.g., conciseness and accuracy of family models) of active model learning methods in the software product line context. These benchmark sets must contain the structural and behavioral variability models of at least one SPL. Each SPL in a benchmark must contain products that requires more than one round of model learning with respect to the basic active learning L* algorithm. Alternatively, tools supporting the synthesis of artificial benchmark models are also welcome. </div>
+	<div class="col-sm-2">
+	</div>
+  </div>
+</div>
+
+
+<div id="material" class="container-fluid">
+  <div class="row">
+  <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Material</h2>
+<a href="./files/activelearningbenchmark.pdf" target="_new"><span class="glyphicon glyphicon-file"></span>Challenge case description</a> <br>
+<br>
+<a href="https://github.com/damascenodiego/splc22challenge_dataset_learning" target="_new"><span class="glyphicon glyphicon-folder-open"></span> Repository of source code and more information</a> <br>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
+
+<div id="solutions" class="container-fluid bg-grey">
+  <div class="row">
+     <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Solutions</h2>
+No solutions yet.
+    </div>
+	<div class="col-sm-2"></div>
+  </div>
+</div>
+
+<div id="discussion" class="container-fluid bg-grey">
+  <div class="row">
+     <div class="col-sm-1"></div>
+   <div class="col-sm-2"></div>
+    <div class="col-sm-7">
+<h2>Discussion</h2>
+No discussion section for the moment.
+   </div>
+	<div class="col-sm-2"></div>
+  </div>
+</div>
+
+
+
+<footer class="container-fluid text-center">
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#mainPage']").on('click', function(event) {
+
+	// Store hash
+	var hash = this.hash;
+	if (typeof $(hash).offset() !== 'undefined') {
+	  
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  }
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
