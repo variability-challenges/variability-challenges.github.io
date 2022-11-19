@@ -95,11 +95,45 @@ SPLC 2019 Solution<br/>
 A software product line enables an organization to systematically reuse software features that allow to derive customized variants from a common platform, promising reduced development and maintenance costs. In practice, however, most organizations start to clone existing systems and only extract a software product line from such clones when the maintenance and coordination costs increase. Despite the importance of extractive software-product-line adoption, we still have only limited knowledge on what practices work best and miss datasets for evaluating automated techniques. To improve this situation, we performed an extractive adoption of the Apo-Games, resulting in a systematic analysis of five Java games and the migration of three games into a composition-based software product line. In this paper, we report our analysis and migration process, discuss our lessons learned, and contribute a feature model as well as the implementation of the extracted software product line. Overall, the results help to gain a better understanding of problems that can appear during such migrations, indicating research opportunities and hints for practitioners. Moreover, our artifacts can serve as dataset to test automated techniques and developers may improve or extent them in the future.<br/>
 <a href="https://doi.org/10.1145/3336294.3342361" target="_new"><span class="glyphicon glyphicon-file"></span> Solution paper</a> <br>
 <br/>
+<!--  SPLC 2019 solution -->
 <h3>Migrating the Android Apo-Games into an Annotation-Based Software Product Line</h3>
 <i>Jonas Åkesson, Sebastian Nilsson, Jacob Krüger and Thorsten Berger</i><br/>
 SPLC 2019 Solution<br/>
 Most organizations start to reuse software by cloning complete systems and adapting them to new customer requirements. However, with an increasing number of cloned systems, the problems of this approach become severe, due to synchronization efforts. In such cases, organizations often decide to extract a software product line, which promises to reduce development and maintenance costs. While this scenario is common in practice, the research community is still missing knowledge about best practices and needs datasets to evaluate supportive techniques. In this paper, we report our experiences with extracting a preprocessor-based software product line from five cloned Android games of the Apo-Games challenge. Besides the process we employed, we also discuss lessons learned and contribute corresponding artifacts, namely a feature model and source code. The insights into the processes help researchers and practitioners to improve their understanding of extractive softwareproduct-line adoption. Our artifacts can serve as a valuable dataset for evaluations and can be extended in the future to support researchers as a real-world baseline.<br/>
 <a href="https://doi.org/10.1145/3336294.3342362" target="_new"><span class="glyphicon glyphicon-file"></span> Solution paper</a> <br>
+<!--  SPLC 2022 solution -->
+<h3>Code smell analysis in cloned Java variants: the apo-games case study</h3>
+<i>Luciano Marchezan, Wesley K. G. Assunção, Gabriela Michelon, Edvin Herac, Alexander Egyed</i><br/>
+SPLC 2022 Solution<br/>
+Families of software products are usually created using
+opportunistic reuse (clone-and-own) in which products are cloned and
+adapted to meet new requirements, user preferences, or
+non-functional properties. Opportunistic reuse brings short-term
+benefits, e.g., reduced time-to-market, whereas creating long-term
+drawbacks, e.g., the need of changing multiple variants for any
+maintenance and evolution activity. This situation is even worse
+when the individual products have poor design or implementation
+choices, the so-called code smells. Due to their harmfulness to
+software quality, code smells should be detected and removed as
+early as possible. In a family of software products, the same code
+smell must be identified and removed in all variants where it is are
+present. Identifying instances of similar code smells affecting
+different variants has not been investigated in the literature yet.
+This is the case of the Apo-Games family, which has the challenge of
+identifying the flaws in the design and implementation of cloned
+games. To address this challenge, we applied our inconsistency and
+repair approach to detect and suggest solutions for six types of
+code smells in 19 products of the Apo-games family. Our results show
+that a considerable number of smells were identified, most of them
+for the long parameter list and data class types. The number of the
+same smells identified in multiple variants ranged between 2.9 and
+20.2 on average, showing that clone-and-own may lead to the
+replication of code smells in multiple products. Lastly, our
+approach was able to generate between 4.9 and 28.98 repair
+alternatives per smell on average. 
+<br/>
+<a href="https://doi.org/10.1145/3546932.3547015" target="_new"><span class="glyphicon glyphicon-file"></span> Solution paper</a> <br>
+
     </div>
 	<div class="col-sm-2"></div>
   </div>
