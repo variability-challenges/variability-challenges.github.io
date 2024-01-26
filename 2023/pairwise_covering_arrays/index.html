@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Testing Challenge</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat"
+	rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato"
+	rel="stylesheet" type="text/css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body id="mainPage" data-spy="scroll" data-target=".navbar"
+	data-offset="60">
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Variability
+					Challenges</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#abstract">Abstract</a></li>
+					<li><a href="#material">Material</a></li>
+					<li><a href="#solutions">Solutions</a></li>
+					<li><a href="#discussion">Discussion</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="jumbotron text-center">
+		<h4>SPLC 2023 Solution</h4>
+		<h2>Generating Pairwise Covering Arrays for Highly Configurable Software Systems</h2>
+		Chuan Luo, School of Software, Beihang University ,Beijing, China</br> 
+		Jianping Song, School of Software, Beihang University, Beijing, China</br>
+		Qiyuan Zhao, School of Computing,National University of Singapore,Singapore</br>
+		Yibei Li, Department of Physics, Tsinghua University, Beijing, China</br>
+		Shaowei Cai, Institute of Software,Chinese Academy of Sciences, Beijing, China</br>
+		Chunming Hu, School of Software, Beihang University, Beijing, China
+	</div>
+
+	<div id="abstract" class="container-fluid">
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-2"></div>
+			<div class="col-sm-7">Highly configurable software systems play crucial roles in real-
+world applications, which urgently calls for useful testing methods.
+Combinatorial interaction testing (CIT) is an effective methodology
+for detecting those faults that are triggered by the interaction of
+any 𝑡 options, where 𝑡 is the testing strength. Pairwise testing, i.e.,
+CIT with 𝑡 = 2, is known to be the most practical and popular
+CIT technique, and the pairwise covering array generation (PCAG)
+problem is the most critical problem in pairwise testing. Due to
+the practical importance of PCAG, many PCAG algorithms have
+been proposed. Unfortunately, existing PCAG algorithms suffer
+from the severe scalability problem. To this end, the SPLC Scalability 
+Challenge ( i.e., Product Sampling for Product Lines: The
+Scalability Challenge) has been proposed since 2019, in order to
+motivate researchers to develop practical PCAG algorithms for
+overcoming this scalability problem. In this work, we present a
+practical PCAG algorithm dubbed SamplingCA-ASF . To the best
+of our knowledge, our experiments show that SamplingCA-ASF
+is the fi rst algorithm that can generate PCAs for Automotive02
+and Linux , the two hardest and largest-scale instances in the SPLC
+Scalability Challenge, within reasonable time. Our experimental
+results indicate that SamplingCA-ASF can effectively alleviate the
+scalability problem in pairwise testing.</div>
+			<div class="col-sm-2"></div>
+		</div>
+	</div>
+
+
+	<div id="material" class="container-fluid">
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-2"></div>
+			<div class="col-sm-7">
+				<h2>Material</h2>
+				<a href="./files/pairwise_covering_arrays.pdf" target="_new"><span
+					class="glyphicon glyphicon-file"></span>Solution description</a>
+				<br> <br> <a
+					href="https://github.com/chuanluocs/SamplingCA-ASF"
+					target="_new"><span class="glyphicon glyphicon-folder-open"></span>
+					Repository of the tool</a> <br>
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+	</div>
+
+	<div id="solutions" class="container-fluid bg-grey">
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-2"></div>
+			<div class="col-sm-7">
+				<h2>Challenge</h2>
+				<a href="https://github.com/PettTo/SPLC2019_The-Scalability-Challenge_Product-Lines/"
+				   target="_new"><span class="glyphicon glyphicon-folder-open"></span>
+				   Repository of some models</a><br>
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+	</div>
+
+	<div id="discussion" class="container-fluid bg-grey">
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-2"></div>
+			<div class="col-sm-7">
+				<h2>Discussion</h2>
+				No discussion section for the moment.
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+	</div>
+
+
+
+	<footer class="container-fluid text-center"> </footer>
+
+	<script>
+		$(document).ready(
+				function() {
+					// Add smooth scrolling to all links in navbar + footer link
+					$(".navbar a, footer a[href='#mainPage']").on('click',
+							function(event) {
+
+								// Store hash
+								var hash = this.hash;
+								if (typeof $(hash).offset() !== 'undefined') {
+
+									// Prevent default anchor click behavior
+									event.preventDefault();
+
+									// Using jQuery's animate() method to add smooth page scroll
+									// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+									$('html, body').animate({
+										scrollTop : $(hash).offset().top
+									}, 900, function() {
+
+										// Add hash (#) to URL when done scrolling (default click behavior)
+										window.location.hash = hash;
+									});
+								}
+							});
+
+					$(window).scroll(function() {
+						$(".slideanim").each(function() {
+							var pos = $(this).offset().top;
+
+							var winTop = $(window).scrollTop();
+							if (pos < winTop + 600) {
+								$(this).addClass("slide");
+							}
+						});
+					});
+				})
+	</script>
+
+</body>
+</html>
